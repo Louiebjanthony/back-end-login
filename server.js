@@ -49,7 +49,9 @@ app.post('/api/register', (req, res) => {
 
   res.json({ ok: true, message: 'Registered successfully' });
 });
-
+app.get('/', (req, res) => {
+  res.send('✅ Backend is running successfully!');
+});
 // RUN SERVER
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
